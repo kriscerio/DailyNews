@@ -1,16 +1,13 @@
 import React, {Component} from 'react';
 import { View, Text } from 'react-native';
-import Header from './components/Header';
-import NewsList from './MainActivity/NewsList';
+import Header from './components/common/Header';
+import NewsList from './components/MainScreen/NewsList';
+import {StackNavigator} from 'react-navigation';
+import Root from './manifest/manifest';
 
 class App extends Component {
     render() {
-        return (
-            <View style={styles.viewFlex}>
-                <Header headerText='Daily News'/>
-                <NewsList />
-            </View>
-        );
+        return <Root />
     }
 }
 
